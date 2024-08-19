@@ -31,6 +31,8 @@
             color: #ff6363;
             margin-bottom: 15px;
             font-size: 1.5em;
+            line-height: 1.2;
+            word-wrap: break-word;
         }
         
         .greeting-card p {
@@ -101,6 +103,12 @@
             max-width: 100%;
             height: auto;
         }
+
+        @media (max-width: 600px) {
+            .greeting-card h1 {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -159,3 +167,4 @@
     </script>
 </body>
 </html>
+
