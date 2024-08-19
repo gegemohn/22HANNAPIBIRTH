@@ -103,7 +103,7 @@
  
         <div id="surprise-message"></div>
         
-        <form action="https://formspree.io/f/manwdjkn" method="POST">
+        <form id="greeting-form" action="https://formspree.io/f/manwdjkn" method="POST">
             <!-- New Date Input Field -->
             <label for="available-date">Bestie when are you available &lt;3</label>
             <input type="date" id="available-date" name="available-date" required>
@@ -143,6 +143,23 @@
         function translateText() {
             const translatedText = "What is your wish? / What do you want?";
             document.getElementById("question-label").innerText = translatedText;
+        }
+
+        // Redirect after form submission
+        document.getElementById('greeting-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+            fetch(event.target.action, {
+                method: 'POST',
+                body: new FormData(event.target),
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = 'https://www.youtube.com/watch?v=LrFq6enIASM&t=353s'; // Replace with your URL
+                } else {
+                    alert('There was a problem with your submission.');
+                }
+            }).catch(error => {
+                alert('There was a problem with your submission.');
+            });
         }
     </script>
 </body>
