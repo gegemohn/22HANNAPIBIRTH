@@ -137,30 +137,14 @@
                 <a href="https://music.youtube.com/playlist?list=PLJtarLKIqq1Dw8IJSlDalkOKeLc0EWeZv&si=cQdmx8tuXg4Oi2OC" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" style="width: 100px;">
                 </a>
+
+                Bonus surprise: 
+                <button class="joy-button" onclick="window.location.href='https://www.youtube.com/watch?v=LrFq6enIASM&t=353s'">Press for Joy</button>
+
             `;
         }
 
-        function translateText() {
-            const translatedText = "What is your wish? / What do you want?";
-            document.getElementById("question-label").innerText = translatedText;
-        }
-
-        // Redirect after form submission
-        document.getElementById('greeting-form').onsubmit = function(event) {
-            event.preventDefault(); // Prevent default form submission
-            fetch(event.target.action, {
-                method: 'POST',
-                body: new FormData(event.target),
-            }).then(response => {
-                if (response.ok) {
-                    window.location.href = 'https://www.youtube.com/watch?v=LrFq6enIASM&t=353s'; // Replace with your URL
-                } else {
-                    alert('There was a problem with your submission.');
-                }
-            }).catch(error => {
-                alert('There was a problem with your submission.');
-            });
-        }
+        
     </script>
 </body>
 </html>
