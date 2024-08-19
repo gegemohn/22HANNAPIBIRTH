@@ -5,117 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Greeting</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(to right, #ffafbd, #ffc3a0);
-            font-family: 'Arial', sans-serif;
-        }
-        
-        .greeting-card {
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 90%;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .greeting-card h1 {
-            color: #ff6363;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            line-height: 1.2;
-        }
-        
-        .greeting-card p {
-            font-size: 1em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        
-        .greeting-card button {
-            background-color: #ff6363;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            margin: 5px;
-        }
-        
-        .greeting-card button:hover {
-            background-color: #ff4444;
-        }
-        
-        #surprise-message {
-            margin-top: 15px;
-            font-size: 1.2em;
-            color: #ff6363;
-        }
-        
-        form {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        form input, form textarea {
-            width: 100%;
-            max-width: 350px;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        
-        form button[type="submit"] {
-            background-color: #00aaff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-        
-        form button[type="submit"]:hover {
-            background-color: #0088cc;
-        }
-        
-        #translation-result {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        @media (max-width: 600px) {
-            .greeting-card h1 {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #ffafbd, #ffc3a0);
+        font-family: 'Arial', sans-serif;
+    }
+    
+    .greeting-card {
+        text-align: center;
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 80%;
+    }
+    
+    .greeting-card h1 {
+        color: #ff6363;
+        margin-bottom: 20px;
+    }
+    
+    .greeting-card p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+    }
+    
+    .greeting-card button {
+        background-color: #ff6363;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    
+    .greeting-card button:hover {
+        background-color: #ff4444;
+    }
+    
+    #surprise-message {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #ff6363;
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    form button[type="submit"] {
+        background-color: #00aaff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    form button[type="submit"]:hover {
+        background-color: #0088cc;
+    }
+    
+    #translation-result {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+</style>
 </head>
 <body>
     <div class="greeting-card">
-        <h1>Happy Bibibi ni - bi bi birthday Hanna Abigail</h1>
+        <h1>Happy Bibibi ni - bi bi  birthday Hanna Abigail</h1>
         <p></p>
         <!-- Scam Button -->
         <button id="scam-button" onclick="scamButton()">Click me for a surprise!</button>
@@ -135,8 +113,12 @@
             <input type="text" id="what" name="what" required>
             <button type="submit">Send Message</button>
         </form>
-        <p>Love you pre - gie n bee</p>
-        <img src="othercodes/photo_2022-04-08_18-40-24.jpg" alt="Image Description">
+        <p>
+            Love you pre - gie n bee
+        </p>
+        <img src="othercodes/photo_2022-04-08_18-40-24.jpg" alt="Image Description" style="width: 10px;">
+            <br>
+        <div id="othercodes/photo_2022-04-08_18-40-24.jpg"></div>
     </div>
 
     <script>
@@ -144,28 +126,29 @@
             // Hide the scam button and show the real surprise button
             document.getElementById("scam-button").style.display = "none";
             document.getElementById("real-surprise-button").style.display = "inline-block";
-            document.getElementById("surprise-message").innerHTML = `
-                <img src="othercodes/photo_2024-08-19_23-57-30.jpg" alt="Image Description" style="width: 50px;">
-                <br>
+            document.getElementById("surprise-message").innerHTML = 
+            <img src="othercodes/photo_2024-08-19_23-57-30.jpg" alt="Image Description" style="width: 50px;">
+            <br>
                 BOOOOOO! Char ok sorry real surprise try the button again
-            `;
+            ;
         }
 
         function displayRealSurprise() {
-            document.getElementById("surprise-message").innerHTML = `
+            document.getElementById("surprise-message").innerHTML = 
                 <p>🎉 HANNA 22 MIXTAPPEEEEE:</p>
                 <a href="https://www.youtube.com/channel/your_channel_id" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" style="width: 100px;">
                 </a>
-            `;
+            ;
         }
 
         function translateText() {
-            const translatedText = "What is your wish? / What do you want?";
+
+            const translatedText = "Nu gusto mo pre";
+            
+
             document.getElementById("question-label").innerText = translatedText;
         }
     </script>
 </body>
 </html>
-
-
