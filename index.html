@@ -14,7 +14,6 @@
             height: 100vh;
             background: linear-gradient(to right, #ffafbd, #ffc3a0);
             font-family: 'Arial', sans-serif;
-            overflow-x: hidden;
         }
         
         .greeting-card {
@@ -102,6 +101,7 @@
         img {
             max-width: 100%;
             height: auto;
+            border-radius: 5px;
         }
 
         @media (max-width: 600px) {
@@ -133,9 +133,7 @@
             <input type="text" id="what" name="what" required>
             <button type="submit">Send Message</button>
         </form>
-        <p>
-            Love you pre - gie n bee
-        </p>
+        <p>Love you pre - gie n bee</p>
         <img src="othercodes/photo_2022-04-08_18-40-24.jpg" alt="Image Description">
     </div>
 
@@ -145,8 +143,8 @@
             document.getElementById("scam-button").style.display = "none";
             document.getElementById("real-surprise-button").style.display = "inline-block";
             document.getElementById("surprise-message").innerHTML = `
-            <img src="othercodes/photo_2024-08-19_23-57-30.jpg" alt="Image Description">
-            <br>
+                <img src="othercodes/photo_2024-08-19_23-57-30.jpg" alt="Image Description">
+                <br>
                 BOOOOOO! Char ok sorry real surprise try the button again
             `;
         }
